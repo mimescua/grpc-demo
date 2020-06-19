@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sum;
+
+service SumService {
+    //unary API
+    rpc Sum (SumRequest) returns (SumResponse) {};
+}
+
+message SumRequest{
+    int32 addend_one = 1;
+    int32 addend_two = 2;
+}
+
+message SumResponse{
+    int32 sum_result = 1;
+}
